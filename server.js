@@ -15,7 +15,7 @@ router.get('/test',function(req,res){
 });
 
 
-app.use('/', router);
+app.use('/helloworld', router);
 app.listen(port);
 console.log('Server listen on port ' + port);
 
