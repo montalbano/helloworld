@@ -1,12 +1,17 @@
 var express = require('express');
 const path = require('path');
+const { nextTick } = require('process');
 const router = express.Router();
 var app = express();
-//app.use(express.static(__dirname + '/public')); //__dir and not _dir
+//app.use("/helloworld", express.static(path.join(__dirname + '/public'))); //__dir and not _dir
 var port = 3333; // you can use any port
 
 
 router.get('/',function(req,res){
+    res.sendFile(path.join(__dirname+'/public/index.html'));
+});
+
+router.get('/home',function(req,res){
     res.sendFile(path.join(__dirname+'/public/index.html'));
 });
 
