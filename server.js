@@ -11,10 +11,6 @@ router.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/public/index.html'));
 });
 
-router.get('/home',function(req,res){
-    res.sendFile(path.join(__dirname+'/public/index.html'));
-});
-
 router.get('/test',function(req,res){
     res.sendFile(path.join(__dirname+'/public/test.html'));
 });
